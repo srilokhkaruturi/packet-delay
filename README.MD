@@ -8,7 +8,7 @@ A Python script to calculate the total delay for a packet from source to destina
 ## Usage
 
 ```
-python3 propagation_delay_packets.py packet_length link_distance link_speed transmission_rate
+python3 total_packet_delay.py packet_length link_distance link_speed transmission_rate
 ```
 
 
@@ -30,7 +30,8 @@ The total delay is the sum of the propagation delay and the transmission delay.
 ## Example
 
 ```
-python3 propagation_delay_packets.py 1 10 2 10
+> python3 total_packet_delay.py 1 10 2 10
+> 5.100 Seconds
 ```
 
 This will calculate the total delay for a packet with a size of 1 MB, traveling a distance of 10 km, at a speed of 2 km/s and a transmission rate of 10 MB/s.

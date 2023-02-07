@@ -1,6 +1,6 @@
 """
 Script: 
-    propagation_delay_packets.py
+    total_packet_delay.py
 Description: 
     This script will allow one to find the 
     propagation delay for a packet from source to 
@@ -29,7 +29,7 @@ def compute_transmission_delay(length, transmission_rate):
 
 def main():
     # handle arguments / usage
-    USAGE_STR = "Usage: python3 propagation_delay_packets.py packet_length link_distance link_speed transmission_rate" + \
+    USAGE_STR = "Usage: python3 total_packet_delay.py packet_length link_distance link_speed transmission_rate" + \
                 "\n\t Argument Specs: \n\t\t 1. Packet Length/Size (Megabytes) \n\t\t 2. Link Distance (Kilometers) \n\t\t 3. Speed of travel through link (Kilometers/Second) \n\t\t 4. Transmission Rate (Megabytes/Second)"
     num_args = len(sys.argv)
     if (num_args != 5):
@@ -47,7 +47,7 @@ def main():
     total_delay = propagation_delay + transmission_delay
 
     # output
-    print(total_delay)
+    print("%.3f Seconds" % total_delay)
 
 
 main()
